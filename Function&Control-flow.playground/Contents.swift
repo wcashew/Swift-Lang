@@ -1,5 +1,6 @@
 import Cocoa
 
+//控制语句 if-else 的使用
 func calcBMI(weight:Double, height:Double) -> String {
 	let bmi = round(weight / (pow(height, 2))) //计算 bmi 指数，体重单位为公斤，身高单位为米
 	var message = "" //状态文字提示
@@ -23,3 +24,12 @@ func calcBMI(weight:Double, height:Double) -> String {
 	return "你的 BMI 是\(bmi)，状态是\(message)。"
 }
 print(calcBMI(weight: 70, height: 1.70))
+
+//循环语句 for-in 的使用
+func readBook(total: Int) {
+	for i in (1...total).reversed() {
+		print("现在有\(i)本书，读完一本，还剩\(i-1)本没有读。")
+	}
+	print("全部读完了！")
+}
+readBook(total: 10)
