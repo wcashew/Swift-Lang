@@ -78,4 +78,63 @@ shadow.HP -= 40
 print("shadow 现在的 HP 是 \(shadow.HP)，player 现在的 HP 是 \(player.HP)")
 
 //类的继承
+//基类
+class Vehicle {
+	var currentSpeed = 0.0
+	func makeNoise() {
+		
+	}
+}
+//子类的声明
+class Bicycle: Vehicle {
+	var hasBasket = false
+}
+let bicycle = Bicycle()
+bicycle.hasBasket = true
+bicycle.currentSpeed = 15
 
+//子类也可以被其他类继承
+class Tandem: Bicycle {
+	var currentNumOfPerson = 0
+}
+let tandem = Tandem()
+tandem.currentNumOfPerson = 2
+tandem.currentSpeed = 20
+
+//类的重写
+class Train: Vehicle {
+	override func makeNoise() {
+		print("kuangchi")
+	}
+}
+class Plane: Vehicle {
+	override func makeNoise() {
+		print("wuwu")
+	}
+}
+let train = Train()
+let plane = Plane()
+train.makeNoise()
+plane.makeNoise()
+bicycle.makeNoise()
+
+//构造函数（构造器）
+class Box {
+	var length: Double
+	var width: Double
+	var height: Double
+	
+	init(length: Double, width: Double, height: Double) {
+		self.length = length
+		self.width = width
+		self.height = height
+	}
+	
+	init(cube sideLength: Double) {
+		length = sideLength
+		width = sideLength
+		height = sideLength
+	}
+}
+let box = Box(length: 2, width: 4, height: 6)
+let cube = Box(cube: 3)
