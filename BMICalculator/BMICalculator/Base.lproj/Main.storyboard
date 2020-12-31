@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-6x-Jd4">
+                                <rect key="frame" x="10" y="286.5" width="355" height="94"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入身高（米）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3j-aE-Dmv">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入体重（千克）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ubc-0O-iak">
+                                        <rect key="frame" x="0.0" y="60" width="355" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入数据..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cdv-E9-qKf">
+                                <rect key="frame" x="128.5" y="247.5" width="118.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6z0-7A-y8N">
+                                <rect key="frame" x="167" y="395.5" width="41" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="计算"/>
+                                <connections>
+                                    <action selector="calculation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOH-4o-L03"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eCo-6x-Jd4" secondAttribute="trailing" constant="10" id="6V7-Xk-gcj"/>
+                            <constraint firstItem="eCo-6x-Jd4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6pC-wo-feC"/>
+                            <constraint firstItem="eCo-6x-Jd4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nyp-At-eqS"/>
+                            <constraint firstItem="6z0-7A-y8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pll-0v-186"/>
+                            <constraint firstItem="6z0-7A-y8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rok-kb-hwy"/>
+                            <constraint firstItem="eCo-6x-Jd4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uov-gj-rLd"/>
+                            <constraint firstItem="eCo-6x-Jd4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="WIB-gG-hCn"/>
+                            <constraint firstItem="6z0-7A-y8N" firstAttribute="top" secondItem="eCo-6x-Jd4" secondAttribute="bottom" constant="15" id="XkC-ax-PaG"/>
+                            <constraint firstItem="Cdv-E9-qKf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZN5-wH-KcL"/>
+                            <constraint firstItem="eCo-6x-Jd4" firstAttribute="top" secondItem="Cdv-E9-qKf" secondAttribute="bottom" constant="15" id="anI-uD-KnV"/>
+                            <constraint firstItem="eCo-6x-Jd4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tnb-jO-qei"/>
+                            <constraint firstItem="eCo-6x-Jd4" firstAttribute="top" secondItem="Cdv-E9-qKf" secondAttribute="bottom" constant="15" id="yk3-iP-CE2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="displayer" destination="Cdv-E9-qKf" id="3EW-1s-Ajc"/>
+                        <outlet property="heightInput" destination="X3j-aE-Dmv" id="ySb-ZU-Jzz"/>
+                        <outlet property="weightInput" destination="ubc-0O-iak" id="EzD-sL-i2b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-226" y="-308"/>
         </scene>
     </scenes>
 </document>
