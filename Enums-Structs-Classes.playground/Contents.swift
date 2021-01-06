@@ -125,6 +125,7 @@ class Box {
 	var height: Double
 	
 	init(length: Double, width: Double, height: Double) {
+		//self 代表变量自身
 		self.length = length
 		self.width = width
 		self.height = height
