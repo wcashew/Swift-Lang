@@ -11,6 +11,7 @@ if let world = world {
 	print("可选类型 world 有值，值为 \(world)")
 }
 
+//guard 语句展开可选绑定
 func check(_ number: Int?) {
 	guard let number = number else {
 		print("可选类型没有值")
