@@ -27,7 +27,7 @@ print(calcBMI(weight: 70, height: 1.70))
 
 //循环语句 for-in 的使用
 func readBook(total: Int) {
-	for i in (1...total).reversed() {
+	for i in (1...total).reversed() { //反转排序方法
 		print("现在有\(i)本书，读完一本，还剩\(i-1)本没有读。")
 	}
 	print("全部读完了！")
