@@ -1,7 +1,7 @@
 # Swift-Lang
 
 
-## Swift 学习笔记
+## Swift 简单笔记
 
 
 此笔记直接同步自 Xcode 下的代码，请在 Xcode 中打开。
