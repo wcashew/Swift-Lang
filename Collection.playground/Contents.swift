@@ -27,7 +27,6 @@ someEverNums.isEmpty //判断数组是否为空数组
 
 //字典 键值对
 var olympicGames: Dictionary<Int, String> = [2016: "里约奥运会", 2012: "伦敦奥运会", 2008: "北京奥运会"]
-
 var dict = [String: Int]() //声明一个空字典
 var provincialCapitals = ["河南": "郑州", "江苏": "南京", "湖北": "武汉"]
 
