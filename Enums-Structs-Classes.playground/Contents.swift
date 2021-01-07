@@ -35,6 +35,7 @@ switch direction {
 }
 
 //类和结构体
+//声明结构体
 struct Resolution {
 	var width = 0
 	var height = 0
