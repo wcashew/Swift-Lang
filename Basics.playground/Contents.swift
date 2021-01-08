@@ -73,5 +73,5 @@ print("The status message is \(http200Status.description)")
 //可选项用来处理值可能缺失的情况
 let possibleNum = "123"
 let convertNum = Int(possibleNum)
-//定义可选项，没有提供一个默认值，变量会被自动设置为 nil
+//定义可选项，没有提供一个默认值，则会被自动设置为 nil
 var rightKey: String?
