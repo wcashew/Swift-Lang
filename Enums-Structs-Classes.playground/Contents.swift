@@ -138,5 +138,6 @@ class Box {
 		height = sideLength
 	}
 }
+//直接使用构造函数
 let box = Box(length: 2, width: 4, height: 6)
 let cube = Box(cube: 3)
