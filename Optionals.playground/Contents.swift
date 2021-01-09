@@ -12,7 +12,7 @@ if let world = world {
 }
 
 //guard 语句展开可选绑定
-func check(_ number: Int?) {
+func check(_ number: Int?) { //形参前加 _ 可在调用函数传实参时直接写参数
 	guard let number = number else {
 		print("可选类型没有值")
 		return
