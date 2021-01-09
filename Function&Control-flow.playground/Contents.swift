@@ -1,8 +1,7 @@
-import Cocoa
 
 //控制语句 if-else 的使用
 func calcBMI(weight:Double, height:Double) -> String {
-	let bmi = round(weight / (pow(height, 2))) //计算 bmi 指数，体重单位为公斤，身高单位为米
+	let bmi = round(weight / (height * height)) //计算 bmi 指数，体重单位为公斤，身高单位为米
 	var message = "" //状态文字提示
 	if bmi >= 40 {
 		message = "肥胖III级（非常严重肥胖）"
